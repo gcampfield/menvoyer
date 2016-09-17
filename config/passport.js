@@ -26,13 +26,13 @@ module.exports = function (passport) {
         if (user) {
           return done(null, false, req.flash('error', 'That email is already taken.'));
         } else {
-          var newUser = new User();
-          newUser.local.email = email;
-          newUser.local.password = newUser.generateHash(password);
+          var user = new User();
+          user.local.email = email;
+          user.local.password = user.generateHash(password);
 
-          newUser.save(function(err) {
+          user.save(function(err) {
             if (err) throw err;
-            return done(null, newUser);
+            return done(null, user);
           });
         }
       });
@@ -48,10 +48,10 @@ module.exports = function (passport) {
       User.findOne({ 'local.email' :  email }, function(err, user) {
           if (err) return done(err);
           if (!user)
-              return done(null, false, req.flash('loginMessage', 'No user found.'));
+              return done(null, false, req.flash('error', 'No user found.'));
 
           if (!user.validPassword(password))
-              return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
+              return done(null, false, req.flash('error', 'Oops! Wrong password.'));
           return done(null, user);
       });
   }));

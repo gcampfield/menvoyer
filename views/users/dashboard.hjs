@@ -1,2 +1,25 @@
-<h1>dashobard</h1>
-<a href="/users/logout">logout</a>
+<h1>dashboard</h1>
+
+Email: {{user.local.email}} <br>
+Token: {{user.hashid}} <br>
+
+<h2>Messages</h2>
+
+<table>
+  <tr>
+    <td>Date</td>
+    <td>From</td>
+    <td>Subject</td>
+    <td>Message</td>
+  </tr>
+  {{#messages}}
+  <tr>
+    <td>{{date}}</td>
+    <td>{{from}}</td>
+    <td>{{subject}}</td>
+    <td>{{message}}</td>
+  </tr>
+  {{/messages}}
+</table>
+
+<a href="/logout">logout</a>

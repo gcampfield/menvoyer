@@ -1,7 +1,9 @@
 // Variables
 
 $accent: #0D9EBF;
-$accent-second: #FE5F55;
+$highlight: #ECBA82;
+$error: #FE5F55;
+$success: #7CE287;
 $bgcolor: #F6F4F3;
 $bgcolor-dark: #E2DCDE;
 $textcolor: #E2DCDE;
@@ -39,14 +41,30 @@ header {
     display: inline-block;
   }
 
-  .login {
+  .login, .signup {
     display: block;
     float: right;
     padding: 0.75rem 1.5rem;
+    margin-left: 1rem;
     font-size: 1rem;
     text-transform: uppercase;
     border-radius: 5px;
-    background: lighten($accent, 10%);
+  }
+
+  .login {
+    background: $accent;
+
+    &:hover {
+      background: lighten($accent, 10%);
+    }
+  }
+
+  .signup {
+    background: $highlight;
+
+    &:hover {
+      background: lighten($highlight, 10%);
+    }
   }
 }
 

@@ -28,14 +28,30 @@ header h1 {
   display: inline-block;
 }
 
-header .login {
+header .login, header .signup {
   display: block;
   float: right;
   padding: 0.75rem 1.5rem;
+  margin-left: 1rem;
   font-size: 1rem;
   text-transform: uppercase;
   border-radius: 5px;
+}
+
+header .login {
+  background: #0D9EBF;
+}
+
+header .login:hover {
   background: #10c5ef;
+}
+
+header .signup {
+  background: #ECBA82;
+}
+
+header .signup:hover {
+  background: #f3d2ae;
 }
 
 .hero {

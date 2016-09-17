@@ -1,4 +1,5 @@
 var express = require('express');
+var Message = require('../models/message');
 
 module.exports = function (passport) {
   var router = express.Router();
@@ -7,12 +8,14 @@ module.exports = function (passport) {
   function login_required(req, res, next) {
     if (req.isAuthenticated())
     return next();
-    res.redirect('/');
+    res.redirect('/login');
   }
 
   // GET - /home
   router.get('/home', login_required, function(req, res) {
-    res.render('users/dashboard');
+    Message.find({ tohash: req.user.hashid }, function (err, messages) {
+      res.render('users/dashboard', { user: req.user, messages : messages });
+    });
   });
 
   // GET - /login
