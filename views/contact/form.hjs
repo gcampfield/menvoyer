@@ -1,0 +1,7 @@
+<form method="post">
+  From: <input type="text" name="from"> <br>
+  Subject: <input type="text" name="subject"> <br>
+  Message: <br>
+  <textarea name="message"></textarea> <br>
+  <input type="submit" name="send">
+</form>
