@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-  </body>
-</html>
+{{<base}}
+  {{$content}}
+  <div class="hero">
+    <h1>m'envoyer</h1>
+    <h2>Contact forms made simple</h2>
+  </div>
+  {{/content}}
+{{/base}}

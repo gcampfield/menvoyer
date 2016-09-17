@@ -1,0 +1,50 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Pacifico', 'Raleway', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 1rem;
+  background: #0D9EBF;
+  color: #F6F4F3;
+  font-weight: bold;
+}
+
+header h1 {
+  line-height: 2.5rem;
+  display: inline-block;
+}
+
+header .login {
+  display: block;
+  float: right;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #10c5ef;
+}
+
+.hero {
+  background: #E2DCDE;
+  text-align: center;
+  padding: 10rem 1rem;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: #0D9EBF;
+}

@@ -1,0 +1,64 @@
+// Variables
+
+$accent: #0D9EBF;
+$accent-second: #FE5F55;
+$bgcolor: #F6F4F3;
+$bgcolor-dark: #E2DCDE;
+$textcolor: #E2DCDE;
+
+// General elements
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Pacifico', 'Raleway', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Common elements
+
+header {
+  padding: 1rem;
+  background: $accent;
+  color: $bgcolor;
+  font-weight: bold;
+
+  h1 {
+    line-height: 2.5rem;
+    display: inline-block;
+  }
+
+  .login {
+    display: block;
+    float: right;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: lighten($accent, 10%);
+  }
+}
+
+// Index page
+
+.hero {
+  background: $bgcolor-dark;
+  text-align: center;
+  padding: 10rem 1rem;
+
+  h1 {
+    font-size: 5rem;
+    color: $accent;
+  }
+}
